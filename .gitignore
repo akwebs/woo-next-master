@@ -8,5 +8,7 @@ node_modules/
 dist/
 .cache
 .next
-.env
 .now
+
+# Local Netlify folder
+.netlify
