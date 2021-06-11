@@ -15,7 +15,7 @@ const Nav = () => {
 					<span className="font-semibold text-xl tracking-tight">
 					<Link href="/">
 					<a className="enime logo">
-						<img src="http://localhost:3000/logo.svg" onload="SVGInject(this)"/>
+						<img src="./logo.svg" onload="SVGInject(this)"/>
 					</a>
 					</Link>
 					</span>
@@ -24,7 +24,7 @@ const Nav = () => {
 				{/*Menu button*/}
 				<div className="block onTop">
 					<button onClick={() => setMenuVisibility(! isMenuVisible)} className="flex items-center px-3 py-2 border rounded text-white border-black hover:text-white hover:border-black">
-					<img src="http://localhost:3000/menu-btn.svg" width="15"/>
+					<img src="./menu-btn.svg" width="15"/>
 					</button>
 				</div>
 
