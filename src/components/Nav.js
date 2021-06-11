@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import CartIcon from "./cart/CartIcon";
+import Logo from "./LogoImg";
+import Menu from "./MenuBtn";
 import { useState } from 'react';
 
 const Nav = () => {
@@ -15,7 +17,7 @@ const Nav = () => {
 					<span className="font-semibold text-xl tracking-tight">
 					<Link href="/">
 					<a className="enime logo">
-						<img src="./logo.svg" onload="SVGInject(this)"/>
+						<Logo/>
 					</a>
 					</Link>
 					</span>
@@ -24,7 +26,7 @@ const Nav = () => {
 				{/*Menu button*/}
 				<div className="block onTop">
 					<button onClick={() => setMenuVisibility(! isMenuVisible)} className="flex items-center px-3 py-2 border rounded text-white border-black hover:text-white hover:border-black">
-					<img src="./menu-btn.svg" width="15"/>
+						<Menu/>
 					</button>
 				</div>
 
