@@ -12,7 +12,7 @@ export default function Home (props) {
 	return (
 			<Layout>
 				{/*Hero Carousel*/}
-				<HeroCarousel heroCarousel={heroCarousel}/>
+				{/* <HeroCarousel heroCarousel={heroCarousel}/> */}
 				{/*Categories*/ }
 				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
 					<h2 className="main-title text-xl mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>

@@ -3,17 +3,24 @@ import CartIcon from "./cart/CartIcon";
 import Logo from "./LogoImg";
 import Menu from "./MenuBtn";
 import { useState } from 'react';
+import useSound from 'use-sound';
 
 const Nav = () => {
-
+	const soundUrl = '../beep.mp3';
+	const [play, { stop }] = useSound(
+		soundUrl,
+		{ volume: 0.5 }
+	  );
+	  const [isHovering, setIsHovering] = useState(
+		false
+	  );
 	const [ isMenuVisible, setMenuVisibility ] = useState(false);
-
 	return (
 		<nav className="p-4">
 			<div className="flex items-center justify-between flex-wrap px-3 mx-auto">
 
 				<div className="flex items-center flex-shrink-0 text-white">
-					<span className="font-semibold text-xl tracking-tight">
+					<span className="font-semibold text-xl tracking-tight" onMouseEnter={() => { setIsHovering(true); play(); }} onMouseLeave={() => { setIsHovering(false); stop(); }}>
 					<Link href="/">
 					<a className="enime logo">
 						<Logo/>
@@ -23,8 +30,8 @@ const Nav = () => {
 				</div>
 
 				{/*Menu button*/}
-				<div className="block onTop">
-					<button onClick={() => setMenuVisibility(! isMenuVisible)} className="flex items-center px-3 py-2 border rounded text-white border-black hover:text-white hover:border-black">
+				<div className="block onTop" onMouseEnter={() => { setIsHovering(true); play(); }} onMouseLeave={() => { setIsHovering(false); stop(); }} >
+					<button onMouseEnter={() => setMenuVisibility(! isMenuVisible)} className="flex items-center px-3 py-2 border rounded text-white border-black hover:text-white hover:border-black">
 						<Menu/>
 					</button>
 				</div>
@@ -71,6 +78,7 @@ const Nav = () => {
 						</a>
 						<CartIcon/>
 					</div>
+					<div onMouseEnter={() => setMenuVisibility(! isMenuVisible)} className="hover-close"></div>
 				</div>
 
 			</div>
