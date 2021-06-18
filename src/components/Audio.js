@@ -1,11 +1,41 @@
-import MyFile from "../audio/mixkit-fast-small-sweep-transition-166.wav";
+import { useState } from 'react';
+import useSound from 'use-sound';
 
-const myAudio = () => {
-	return (
-		<audio id="sounds" loop= "false" volume = "60">
-            <source src={MyFile} id="play" type="audio/wav" />
-        </audio> 
+const Sound = (props) => {
+const [Volume, setVolume] = useState(0.5);
+	const soundUrl = '../beep.mp3';
+	const [play, { stop }] = useSound(
+		soundUrl,
+		{volume : Volume, interrupt: true,}
+	  );
+	  
+	  const [isHovering, setIsHovering] = useState(
+		false
+	  );
+	  const volumePlus = () => {
+		if (Volume <= 0.9 ){
+			setVolume(Volume + 0.1);
+		}else{
+			setVolume(Volume + 0);
+		};
+		play();
+	  };
+	  const volumeMinus = () => {
+		if (Volume >= 0.15 ){
+			setVolume(Volume - 0.1);
+		}else{
+			setVolume(Volume - 0);
+		};
+		play();
+		console.log(Volume);
+	  };
+
+	  return (
+		<div className="max-content" onMouseEnter={() => { play(); }} onMouseLeave={() => { stop(); }}>
+			{props.children}
+		</div>
 	)
-};
 
-export default myAudio;
+	};
+
+	export default Sound;
