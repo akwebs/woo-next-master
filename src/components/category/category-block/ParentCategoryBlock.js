@@ -7,7 +7,7 @@ const ParentCategoryBlock = ( props ) => {
 	const { category } = props;
 
 	return (
-		<div className="product mb-5">
+		<div className="product">
 			<Link href={`/category/${category?.slug}`}>
 				<a>
 					{/* <Image
@@ -18,9 +18,9 @@ const ParentCategoryBlock = ( props ) => {
 						defaultImgUrl={DEFAULT_CATEGORY_IMG_URL}
 						altText={category?.image?.altText ?? category.slug}
 					/> */}
-					<div className="product-title-container p-3">
-						<h3 className="product-title text-lg font-medium">{category?.name}</h3>
-						<span className="shop-now text-sm">+ Explore</span>
+					<div className="product-title-container">
+						<h3 className="product-title text-sm font-medium">{category?.name}</h3>
+						{/* <span className="shop-now text-sm">+ Explore</span> */}
 					</div>
 				</a>
 			</Link>

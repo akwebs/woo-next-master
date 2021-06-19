@@ -34,7 +34,13 @@ body {
     margin: auto;
     display: contents;
 }
-
+.heading {
+    font-family: fantasy;
+    font-size: 7em;
+    @media #{$big_device} {
+        font-size: 12em;
+    }
+}
 .header {
     // box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
     width: 100%;
@@ -186,14 +192,23 @@ body {
     padding: 10px 20px;
     font-size: 24px;
 }
-
-.products .product-description {
+.description{
+    font-size: 3em;
+    @media #{$big_device} {
+        font-size: 4em;
+    }
+}
+.products {
+    .product:nth-child(even) {
+        justify-self: self-end;
+    }
+    .product-description {
     max-width: 250px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    }
 }
-
 .categories,
 .cart,
 .checkout {
