@@ -41,25 +41,26 @@ export default function Home (props) {
 				<h1 className="heading text-center">
 						GUNS & THIGHS
 					</h1>
-					<div className="lg:container lg:mx-auto">
+					<div className="lg:container lg:mx-auto mx-4">
 						<ParentCategoriesBlock productCategories={ productCategories }/>
 					</div>	
 				</div>
 				{/*Hero Carousel*/}
-				<div className="container mx-auto my-32 px-4 xl:px-0">
+				<div className="lg:container lg:mx-auto mx-4 my-32 px-4 xl:px-0">
 					<HeroCarousel heroCarousel={heroCarousel}/>
 				</div>
-				{/* <div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
+				{/* <div className="product-categories-container lg:container lg:mx-auto mx-4 my-32 px-4 xl:px-0">
 					<h2 className="main-title text-xl mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
 					<ParentCategoriesBlock productCategories={ productCategories }/>
 				</div> */}
 				{/*Products*/ }
-				<div className="container mx-auto my-32 px-4 xl:px-0">
+				<div className="lg:container lg:mx-auto mx-4 my-32 px-4 xl:px-0">
+				<h2 className="products-main-title main-title mb-5 text-xl uppercase"><span className="main-title-inner">ABOUT US</span></h2>
 				<p className="description text-left">
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 					</p>
 				</div>
-				<div className="products lg:container lg:mx-auto my-32 px-4 xl:px-0">
+				<div className="products lg:container lg:mx-auto mx-4 my-32 px-4 xl:px-0">
 					<h2 className="products-main-title main-title mb-5 text-xl uppercase"><span className="main-title-inner">Products</span></h2>
 					{/* <div className="grid grid-cols-6 gap-4"> */}
 						<Carousel 
@@ -76,13 +77,13 @@ export default function Home (props) {
 					</Carousel>
 					{/* </div> */}
 				</div>
-				<div className="container mx-auto my-32 px-4 xl:px-0">
+				<div className="lg:container lg:mx-auto mx-4 my-32 px-4 xl:px-0">
 				<h2 className="products-main-title main-title mb-5 text-xl uppercase"><span className="main-title-inner">MADE IN</span></h2>
 					<h1 className="heading text-center">
 						BENGALURU
 					</h1>
 				</div>
-				<div className="container mx-auto my-32 px-4 xl:px-0">
+				<div className="lg:container lg:mx-auto mx-4 my-32 px-4 xl:px-0">
 					<h2 className="products-main-title main-title mb-5 text-xl uppercase"></h2>
 					<marquee className="description py-4">This is basic example of marquee Lorem Ipsum is simply dummy text of the printing and typesetting industry</marquee>
 					<h2 className="products-main-title main-title mb-5 text-xl uppercase"></h2>
