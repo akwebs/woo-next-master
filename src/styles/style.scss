@@ -1,3 +1,12 @@
+$big_device: '(min-width: 1200px)';
+$tab: '(max-width: 991px)';
+$mobile:'(max-width: 767.98px)';
+$xs_mobile:'(max-width: 576px)';
+$extra_big_screen: 'only screen and (min-width: 1440px) and (max-width: 1679px)';
+$big_screen:'only screen and (min-width: 1200px) and (max-width: 1439px)';
+$medium_device: 'only screen and (min-width: 992px) and (max-width: 1199.98px)';
+$tab_device:'only screen and (min-width: 768px) and (max-width: 991.98px)';
+$large_mobile: 'only screen and (min-width: 576px) and (max-width: 767.98px)';
 * {
     color: #fff;
 }
@@ -5,9 +14,11 @@
 *:focus {
     outline: none !important;
 }
+
 *::-webkit-scrollbar {
     display: none;
 }
+
 body {
     background-color: #000;
 }
@@ -17,12 +28,13 @@ body {
         width: 100%;
     }
 }
-.max-content{
+
+.max-content {
     width: max-content;
     margin: auto;
-    
     display: contents;
 }
+
 .header {
     // box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
     width: 100%;
@@ -75,17 +87,10 @@ body {
                 top: 0;
                 right: 0;
                 z-index: -1;
+                @media #{$mobile} {
+                    clip-path: None;
+                }
             }
-        }
-        .hover-close {
-            position: absolute;
-            width: 5000px;
-            background: none;
-            height: 1000px;
-            top: 485px;
-            left: -1895px;
-            transform: rotate(33deg);
-            z-index: 2;
         }
         .show {
             top: 0;
@@ -97,10 +102,36 @@ body {
         }
     }
 }
+
+.display-none {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .footer {
     bottom: 0;
     width: 100%;
 }
+
+.hover-close {
+    position: absolute;
+    width: 5000px;
+    background: none;
+    height: 1000px;
+    top: 485px;
+    left: -1895px;
+    transform: rotate(33deg);
+    z-index: 2;
+    @media #{$mobile} {
+        transform: rotate(0deg);
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+        left: -75%;
+    }
+}
+
 // .main::before {
 //     content: '';
 //     position: fixed;

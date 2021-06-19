@@ -10,7 +10,7 @@ import Sound from './Audio';
 const Nav = () => {
 	const [ isMenuVisible, setMenuVisibility ] = useState(false);
 	return (
-		<nav className="p-4">
+			<nav className="p-4">
 			<div className="flex items-center justify-between flex-wrap px-3 mx-auto">
 
 				<div className="flex items-center flex-shrink-0 text-white">
@@ -84,8 +84,9 @@ const Nav = () => {
 						<CartIcon/>
 						</Sound>
 					</div>
-					
-					<div onMouseEnter={() => setMenuVisibility(! isMenuVisible)} className="hover-close" ></div>
+					<div className="hover-close" onMouseEnter={() => setMenuVisibility(! isMenuVisible)}>
+							
+					</div>
 				</div>
 
 			</div>
