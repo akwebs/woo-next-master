@@ -31,7 +31,7 @@ const [Volume, setVolume] = useState(0.5);
 	  };
 
 	  return (
-		<div className="max-content" onMouseEnter={() => { play(); }} onMouseLeave={() => { stop(); }}>
+		<div onMouseEnter={() => { play(); }} onMouseLeave={() => { stop(); }}>
 			{props.children}
 		</div>
 	)

@@ -17,8 +17,8 @@ const Product = ( props ) => {
 					<a>
 						<Image
 							className="object-cover bg-black"
-							width="308"
-							height="308"
+							width="495"
+							height="697"
 							loading="lazy"
 							sourceUrl={ product?.image?.sourceUrl ?? '' }
 							defaultImgUrl={DEFAULT_PRODUCT_HOME_IMG_URL}

@@ -10,10 +10,10 @@ const CartIcon = () => {
 
 	return (
 		<Link href="/cart">
-			<a className="block mt-4 text-white hover:text-white text-center mr-10">
-				<svg xmlns="http://www.w3.org/2000/svg" className="hidden lg:block m-auto" fill="none" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
-				Bag
-				{ productsCount ? <span className="ml-1">({ productsCount })</span> : '' }
+			<a className="_3iw4N JGkgU eNsxw _3fxbX _3Wm5U">
+			<span className="_1h2mV">cart</span>
+			<span className="_2AKAD">{ productsCount ? <span>({ productsCount })</span> : '' }</span>
+			<div className="_3pghL underline"></div>	
 				{/*{ totalPrice ? <span>{ totalPrice }</span> : '' }*/}
 			</a>
 		</Link>
