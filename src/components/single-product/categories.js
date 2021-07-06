@@ -1,12 +1,14 @@
 import { isEmpty, isArray } from 'lodash';
 import Link from 'next/link';
+import Sound from "../Audio";
+
 const Categories = ({category}) => {
 
     if ( isEmpty(category) || ! isArray( category ) ) {
         return null;
     }
     return (
-        <span>
+        <Sound>
                 {
                     category.map( (item) => {
                         return (
@@ -20,7 +22,7 @@ const Categories = ({category}) => {
                         )
                     })
                 }
-        </span>
+        </Sound>
     )
 }
 
