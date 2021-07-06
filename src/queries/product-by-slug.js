@@ -5,6 +5,7 @@ export const PRODUCT_BY_SLUG_QUERY = gql` query Product($slug: ID!) {
 	  id
 	  productId: databaseId
 	  averageRating
+	  status
 	  slug
 	  description
 	  galleryImages {
@@ -15,6 +16,13 @@ export const PRODUCT_BY_SLUG_QUERY = gql` query Product($slug: ID!) {
             mediaItemUrl
           }
       }
+	  productCategories(first:1){
+		nodes {
+		  id
+		  name
+		  slug
+		}
+	  }
 	  image {
 		id
 		uri

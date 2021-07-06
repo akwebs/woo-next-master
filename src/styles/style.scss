@@ -1379,3 +1379,15 @@ header {
 ._1NsqH ._1YBrD {
     display: block;
 }
+
+.product-regular-price, .product-discount {
+    font-size: calc((25/var(--sc)) * 1rem);
+}
+
+.product-images {
+    display: flex;
+    margin: auto;
+    height: 100%;
+    max-width: calc((10*var(--bi)/var(--sc)) * 1rem);
+    align-items: center;
+}

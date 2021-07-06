@@ -21,7 +21,7 @@ const AddToCart = (props) => {
     const [cart, setCart] = useContext(AppContext);
     const [showViewCart, setShowViewCart] = useState(false);
     const [requestError, setRequestError] = useState(null);
-
+    const [addedCart, setAddedCart] = useState(false);
         // Get Cart Data.
     const {data, refetch} = useQuery(GET_CART, {
             notifyOnNetworkStatusChange: true,
@@ -52,6 +52,7 @@ const AddToCart = (props) => {
 
             // 2. Show View Cart Button
             setShowViewCart(true)
+            setAddedCart(true)
         },
         onError: (error) => {
             if (error) {
@@ -71,33 +72,31 @@ const AddToCart = (props) => {
             {"ExternalProduct" === product.__typename ? (
                 <Sound>
                     <a href={product?.externalUrl ?? '/'} target="_blank"
-                       className="px-3 py-1 rounded-sm mr-3 text-sm border-solid border border-current inline-block hover:bg-white hover:text-black hover:border-black">
+                       className="_2k33J JGkgU eNsxw _1m-Jy _3Wm5U">
 						Buy now
                     </a>
                 </Sound>
                 ) :
                 <Sound>
-                    <button 
-                        disabled={addToCartLoading}
-                        onClick={handleAddToCartClick}
-                        className={cx(
-                            'px-3 py-1 rounded-sm mr-3 text-sm border-solid border border-current',
-                            {'hover:bg-white hover:text-black hover:border-black': !addToCartLoading},
-                            {'opacity-50 cursor-not-allowed': addToCartLoading})}>
-                        { addToCartLoading ? 'Adding to cart...' : 'Add to cart' }
+                    <button disabled={addToCartLoading} onClick={handleAddToCartClick} className="_2k33J JGkgU eNsxw _1m-Jy _3Wm5U">
+                        { addToCartLoading ? 'Adding to cart...' : addedCart? 'Add more':'Add to cart' }
                     </button>
                 </Sound>
             }
-            {showViewCart ? (
+                {/* {cx(
+                '',
+                {'hover:bg-white hover:text-black hover:border-black': !addToCartLoading},
+                {'opacity-50 cursor-not-allowed': addToCartLoading})}            
+                {/* {showViewCart ? ( 
                 <Link href="/cart">
                     <Sound>
-                    <button
-                        className="px-3 py-1 rounded-sm text-sm border-solid border border-current inline-block hover:bg-white hover:text-black hover:border-black">View
-                        Cart
-                    </button>
+                        <button
+                            className="px-3 py-1 rounded-sm text-sm border-solid border border-current inline-block hover:bg-white hover:text-black hover:border-black">
+                                View Cart
+                        </button>
                     </Sound>
                 </Link>
-            ) : ''}
+            ) : ''} */}
         </div>
     );
 };

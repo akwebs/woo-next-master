@@ -18,9 +18,9 @@ const Layout = (props) => {
       <ApolloProvider client={client}>
         <Head>
           <title>Guns & Thighs</title>
-          <link rel="preload" type="font/woff2" as="font" crossorigin="anonymous" href="/fonts/Knockout-34.woff2"></link>
-          <link rel="preload" type="font/woff2" as="font" crossorigin="anonymous" href="/fonts/SangBleuOGSerif-Light-WebXL.woff2"></link>
-          <link rel="preload" type="font/woff2" as="font" crossorigin="anonymous" href="/fonts/untitled-sans-web-regular.woff2"></link>
+          <link rel="preload" type="font/woff2" as="font" crossOrigin="anonymous" href="/fonts/Knockout-34.woff2"></link>
+          <link rel="preload" type="font/woff2" as="font" crossOrigin="anonymous" href="/fonts/SangBleuOGSerif-Light-WebXL.woff2"></link>
+          <link rel="preload" type="font/woff2" as="font" crossOrigin="anonymous" href="/fonts/untitled-sans-web-regular.woff2"></link>
         </Head>
         <Header />
         <main id="pageWrapper" className="_3oCbh dark">

@@ -2765,6 +2765,7 @@ body {
 }
 
 ._1-J65 ._3hLrC:nth-child(7n-1) {
+  grid-column: 2;
   -ms-grid-column: 2;
       grid-column-start: 2;
 }
